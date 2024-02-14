@@ -208,7 +208,7 @@ public class main {
             // Tell player their current position
             System.out.println("Current Room: " + currentRoom.name);
             // Ask player where they want to go
-            System.out.println("Choose Action: Move, Search, Look, or Quit?\n");
+            System.out.println("Choose Action: Move, Search, Look, Map, or Quit?\n");
 
             // Grab players input
             String input = scan.nextLine();
@@ -324,6 +324,8 @@ public class main {
                     System.out.print(r.name + ". ");
                 }
                 System.out.print("\n");
+            } else if(input.equalsIgnoreCase("map")){
+                house.printHouseLayout();
             }
             else if (input.equalsIgnoreCase("quit")) {
                 System.out.println("You gave up! Thanks for playing!\n");
